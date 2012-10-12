@@ -1,4 +1,5 @@
 require 'university/version'
+require 'ddd-associations'
 
 module University
   #
@@ -24,7 +25,8 @@ module University
     include DDD::Associations
 
     has_one :title
-    has_many :lectures, :tutorials
+    has_many :lectures
+    has_many :tutorials
     has_one :exam
   end
 
